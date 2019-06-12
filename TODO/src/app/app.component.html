@@ -1,0 +1,44 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="example-container">
+    <mat-card>
+        <div style="text-align:center">
+            <h2>My To Do List kayi 2</h2>
+            <img width="300" alt="Angular Logo" src="assets/images/To-Do-List.png">
+          </div>
+    </mat-card>
+    
+  <mat-card style="text-align:center">
+    <mat-form-field>
+      <input matInput placeholder="New Task" [(ngModel)]="tasks"/>
+    </mat-form-field>
+    <mat-form-field>
+        <!-- <input matInput placeholder="Priority" [(ngModel)]="priority"/> -->
+        <mat-form-field>
+            <mat-label>Priority</mat-label>
+            <select matNativeControl [(ngModel)]="priority">
+              <option value="High">High</option>
+              <option value="Medium">Medium</option>
+              <option value="Low">Low</option>
+            </select>
+          </mat-form-field>
+      </mat-form-field>
+    <button mat-fab color="primary" (click)="newtask()"><mat-icon>add</mat-icon></button>
+  </mat-card>
+    
+  <mat-card *ngFor = "let taskss of task" style="text-align:center">
+      <p>
+        {{taskss.itemname}}
+        {{taskss.itempriority}}
+        <button mat-fab color="warn" (click)="removetask(taskss)"><mat-icon>delete</mat-icon></button>
+        <button mat-fab color="warn" (click)="edittask(taskss)"><mat-icon>edit</mat-icon></button>
+      </p>
+
+  </mat-card>
+
+  <mat-card *ngIf = "checks" style="text-align:center">
+    <h2>Your To Do list is Empty</h2>
+  </mat-card>
+
+</div>
+
+<router-outlet></router-outlet>
