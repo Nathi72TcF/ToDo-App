@@ -1,0 +1,30 @@
+<mat-card style="text-align: center">
+    <mat-form-field>
+        <input matInput placeholder="New Task" [(ngModel)]="tasks"/>
+    </mat-form-field><br>
+
+    <mat-form-field>
+        <select matNativeControl [(ngModel)]="priority" placeholder="Priority">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+    </mat-form-field><br>
+
+    <mat-form-field>
+        <input matInput type="date" [(ngModel)]="Date" placeholder="Date" />
+    </mat-form-field><br>
+
+    <button mat-fab color="primary" (click)="newtask(tasks, priority, Date)"><mat-icon>add</mat-icon></button>
+
+</mat-card>
+
+<!-- <mat-card style="text-align:center">
+    <p *ngFor = "let taskss of ArrayMyTask">
+        {{taskss.itemname}}
+        {{taskss.itempriority}}
+        {{taskss.itemDate}}
+        <button mat-fab color="warn" (click)="removetask(taskss)"><mat-icon>delete</mat-icon></button>
+        <button mat-fab color="warn" (click)="edittask(taskss)"><mat-icon>edit</mat-icon></button>
+    </p>
+</mat-card> -->

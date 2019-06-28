@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+      <span class="paddings" [routerLink]="['/MyTask']">My Tasks</span>
+      <span class="paddings" [routerLink]="['/NewTask']">Create New Task</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}
+  </h1>
+  <img width="300" alt="Angular Logo" src="../assets/images/ToDo2.png">
+
+</div>
+
+<router-outlet></router-outlet>
