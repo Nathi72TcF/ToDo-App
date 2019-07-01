@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyTaskComponent implements OnInit {
 
-  checks = false;
+  checks = true;
 
   ArrayMyTask;
 

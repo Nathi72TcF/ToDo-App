@@ -1,13 +1,13 @@
-<mat-card style="text-align:center">
-<p *ngFor = "let taskss of ArrayMyTask" class="paddings">
-    {{taskss.itemname}}
-    {{taskss.itempriority}}
-    {{taskss.itemDate}}
-    <button mat-fab color="warn" (click)="removetask(taskss)"><mat-icon>delete</mat-icon></button>
-    <button mat-fab color="warn" (click)="edittask(taskss)"><mat-icon>edit</mat-icon></button>
-</p>
-</mat-card>
-
-<!-- <mat-card *ngIf = "checks" style="text-align:center">
+<!-- <mat-card *ngIf="checks" style="text-align:center">
     <h2>Your To Do list is Empty</h2>
 </mat-card> -->
+
+<mat-card style="text-align:center" class="paddings">
+    <p *ngFor = "let taskss of ArrayMyTask" class="paddings"><strong><b>
+        {{taskss.itemname}}
+        {{taskss.itempriority}}
+        {{taskss.itemDate}}
+        <button mat-fab color="warn" (click)="removetask(taskss)"><mat-icon>delete</mat-icon></button>
+        <button mat-fab color="warn" (click)="edittask(taskss)"><mat-icon>edit</mat-icon></button>
+    </b></strong></p>
+</mat-card>

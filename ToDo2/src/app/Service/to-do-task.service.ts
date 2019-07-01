@@ -23,6 +23,8 @@ export class ToDoTaskService {
     this.checks = false;
     this.tasks = '';
     this.priority = '';
+    this.Date = '';
+    alert ('New Task Added to My Task');
   }
 
   removetask(taskss) {
@@ -38,7 +40,7 @@ export class ToDoTaskService {
     const newztask = prompt('edit task', taskss.itemname);
     const newprior = prompt('edit priority', taskss.itempriority);
     const newzdate = prompt('edit Date', taskss.itemDate);
-    if (newztask != null || newprior != null) {
+    if (newztask != null || newprior != null || newzdate != null) {
     this.task[index].itemname = newztask;
     this.task[index].itempriority = newprior;
     this.task[index].itemDate = newzdate;
